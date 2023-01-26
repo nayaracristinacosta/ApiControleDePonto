@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "EjV17bZJYWWFYZgH2kslW5ernIS4c6L7BTq3JIi48vFOQH9vTm9afLb9M8rwqyseieNc0qHfQUfX28UX68O5AA==",
+  "dgSpecHash": "e9k9Chyb+Qdz2NFOLCJI0vHGBvy/iDxQHpKApx9YReTTghyFMu0nJmpt+tmaQ0yjDTY0trCWgURU73EznPSGAg==",
   "success": true,
   "projectFilePath": "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.Repositories\\ApiControleDePonto.Repositories.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\NayaraCosta\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\NayaraCosta\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\NayaraCosta\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\NayaraCosta\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\NayaraCosta\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\NayaraCosta\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\NayaraCosta\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
+    "C:\\Users\\NayaraCosta\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\NayaraCosta\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

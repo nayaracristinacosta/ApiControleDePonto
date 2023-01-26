@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ApiControleDePonto.Domain\ApiControleDePonto.Domain.csproj" />
+    <ProjectReference Include="..\ApiControleDePonto.Repositories\ApiControleDePonto.Repositories.csproj" />
+  </ItemGroup>
+
 </Project>

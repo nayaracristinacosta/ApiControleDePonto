@@ -8,5 +8,7 @@ namespace ApiControleDePonto.Domain.Models
 {
     public class Cargo
     {
+        public int CargoId { get; set; }
+        public string Descricao { get; set; }
     }
 }

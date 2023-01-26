@@ -8,5 +8,9 @@ namespace ApiControleDePonto.Domain.Models
 {
     public class Equipe
     {
+        public int EquipeId { get; set; }
+        public int LiderancaId { get; set; }
+        public int FuncionarioId { get; set; }
+    
     }
 }

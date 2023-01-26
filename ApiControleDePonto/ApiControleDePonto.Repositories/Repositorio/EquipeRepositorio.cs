@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ApiControleDePonto.Repositories.Repositorio
 {
-    public class EquipeRepositorio
+    public class EquipeRepositorio : Contexto
     {
+
     }
 }

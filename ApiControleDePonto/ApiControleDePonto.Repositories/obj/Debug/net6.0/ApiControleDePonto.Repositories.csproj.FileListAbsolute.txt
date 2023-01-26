@@ -1,0 +1,15 @@
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\bin\Debug\net6.0\ApiControleDePonto.Repositories.deps.json
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\bin\Debug\net6.0\ApiControleDePonto.Repositories.dll
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\bin\Debug\net6.0\ApiControleDePonto.Repositories.pdb
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\bin\Debug\net6.0\ApiControleDePonto.Domain.dll
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\bin\Debug\net6.0\ApiControleDePonto.Domain.pdb
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\obj\Debug\net6.0\ApiControleDePonto.Repositories.csproj.AssemblyReference.cache
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\obj\Debug\net6.0\ApiControleDePonto.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\obj\Debug\net6.0\ApiControleDePonto.Repositories.AssemblyInfoInputs.cache
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\obj\Debug\net6.0\ApiControleDePonto.Repositories.AssemblyInfo.cs
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\obj\Debug\net6.0\ApiControleDePonto.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\obj\Debug\net6.0\ApiControleDePonto.Repositories.csproj.CopyComplete
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\obj\Debug\net6.0\ApiControleDePonto.Repositories.dll
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\obj\Debug\net6.0\refint\ApiControleDePonto.Repositories.dll
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\obj\Debug\net6.0\ApiControleDePonto.Repositories.pdb
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto.Repositories\obj\Debug\net6.0\ref\ApiControleDePonto.Repositories.dll
