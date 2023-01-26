@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.csproj": {}
+    "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.Domain\\ApiControleDePonto.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.csproj": {
+    "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.Domain\\ApiControleDePonto.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.csproj",
-        "projectName": "ApiControleDePonto",
-        "projectPath": "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.csproj",
+        "projectUniqueName": "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.Domain\\ApiControleDePonto.Domain.csproj",
+        "projectName": "ApiControleDePonto.Domain",
+        "projectPath": "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.Domain\\ApiControleDePonto.Domain.csproj",
         "packagesPath": "C:\\Users\\NayaraCosta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto\\obj\\",
+        "outputPath": "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\NayaraCosta\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,12 +39,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.2.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -57,9 +51,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

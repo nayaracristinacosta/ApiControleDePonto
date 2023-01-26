@@ -229,11 +229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NayaraCosta\\Desktop\\nayaracristinacosta\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.csproj",
+      "projectUniqueName": "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.csproj",
       "projectName": "ApiControleDePonto",
-      "projectPath": "C:\\Users\\NayaraCosta\\Desktop\\nayaracristinacosta\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.csproj",
+      "projectPath": "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto.csproj",
       "packagesPath": "C:\\Users\\NayaraCosta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NayaraCosta\\Desktop\\nayaracristinacosta\\ApiControleDePonto\\ApiControleDePonto\\obj\\",
+      "outputPath": "C:\\Users\\NayaraCosta\\Desktop\\ApiControleDePonto\\ApiControleDePonto\\ApiControleDePonto\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\NayaraCosta\\AppData\\Roaming\\NuGet\\NuGet.Config",
