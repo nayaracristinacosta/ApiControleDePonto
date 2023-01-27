@@ -11,11 +11,13 @@ namespace ApiControleDePonto.Domain.Models
         public int FuncionarioId { get; set; }
         public string NomeDoFuncionario { get; set; }
         public string  Cpf { get; set; }
-        public DateOnly NascimentoFuncionario { get; set; }
-        public DateOnly DataDeAdmissao { get; set; }
+        public DateTime NascimentoFuncionario { get; set; }
+        public DateTime DataDeAdmissao { get; set; }
         public string CelularFuncionario { get; set; }
         public string EmailFuncionario { get; set; }
+        public string SenhaFuncionario { get; set; }
         public int CargoId { get; set; }
+        
 
     }
 }

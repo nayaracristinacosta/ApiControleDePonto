@@ -46,9 +46,9 @@ namespace ApiControleDePonto.Controllers
 
 
         [HttpDelete("Cargo/CargoId")]
-        public IActionResult Deletar([FromQuery] int identificadorProduto)
+        public IActionResult Deletar([FromQuery] int cargoId)
         {
-            _service.Deletar(identificadorProduto);
+            _service.Deletar(cargoId);
             return StatusCode(200);
         }
 
