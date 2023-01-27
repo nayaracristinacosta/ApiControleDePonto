@@ -6,27 +6,27 @@ using Microsoft.AspNetCore.Mvc;
 namespace ApiControleDePonto.Controllers
 {
     [ApiController]
-    public class liderancaController : ControllerBase
+    public class LiderancaController : ControllerBase
     {
         private readonly LiderancaService _service;
-        public liderancaController()
+        public LiderancaController()
         {
             _service = new LiderancaService();
         }
 
-        [HttpGet("lideranca")]
+        [HttpGet("Lideranca")]
         public IActionResult Listar([FromQuery] string? descricaoEquipe)
         {
             return StatusCode(200, _service.Listar(descricaoEquipe));
         }
 
-        [HttpGet("liderancaId")]
+        [HttpGet("LiderancaId")]
         public IActionResult ObterPorId([FromQuery] int liderancaId)
         {
             return StatusCode(200, _service.Obter(liderancaId));
         }
 
-        [HttpPost("lideranca")]
+        [HttpPost("Lideranca")]
         public IActionResult Inserir([FromBody] Lideranca model)
         {
             try
@@ -45,14 +45,14 @@ namespace ApiControleDePonto.Controllers
         }
 
 
-        [HttpDelete("lideranca/liderancaId")]
+        [HttpDelete("Lideranca/LiderancaId")]
         public IActionResult Deletar([FromQuery] int liderancaId)
         {
             _service.Deletar(liderancaId);
             return StatusCode(200);
         }
 
-        [HttpPut("lideranca")]
+        [HttpPut("Lideranca")]
         public IActionResult Atualizar([FromBody] Lideranca model)
         {
             try

@@ -14,7 +14,7 @@ namespace ApiControleDePonto.Controllers
             _service = new CargoService();
         }
 
-        [HttpGet("cargo")]
+        [HttpGet("Cargo")]
         public IActionResult Listar([FromQuery] string? descricao)
         {
             return StatusCode(200, _service.Listar(descricao));

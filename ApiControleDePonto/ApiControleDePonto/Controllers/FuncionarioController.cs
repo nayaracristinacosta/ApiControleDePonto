@@ -14,7 +14,7 @@ namespace ApiControleDePonto.Controllers
             _service = new FuncionarioService();
         }
 
-        [HttpGet("funcionario")]
+        [HttpGet("Funcionario")]
         public IActionResult Listar([FromQuery] string? nomeDoFuncionário)
         {
             return StatusCode(200, _service.Listar(nomeDoFuncionário));
