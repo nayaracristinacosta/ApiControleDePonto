@@ -47,6 +47,7 @@ namespace ApiControleDePonto.Repositories.Repositorio
 
             using (var cmd = new SqlCommand(comandoSql, _conn))
             {
+                cmd.Parameters.AddWithValue("@FuncionarioId", model.FuncionarioId);
                 cmd.Parameters.AddWithValue("@NomeDoFuncionario", model.NomeDoFuncionario);
                 cmd.Parameters.AddWithValue("@Cpf", model.Cpf);
                 cmd.Parameters.AddWithValue("@NascimentoFuncionario", model.NascimentoFuncionario);
@@ -54,6 +55,7 @@ namespace ApiControleDePonto.Repositories.Repositorio
                 cmd.Parameters.AddWithValue("@CelularFuncionario", model.CelularFuncionario);
                 cmd.Parameters.AddWithValue("@EmailFuncionario", model.EmailFuncionario);
                 cmd.Parameters.AddWithValue("@SenhaFuncionario", model.SenhaFuncionario);
+                cmd.Parameters.AddWithValue("@CargoId", model.CargoId);
                 if (cmd.ExecuteNonQuery() == 0)
                     throw new InvalidOperationException($"Nenhum registro afetado para o Funcionario de ID {model.FuncionarioId}");
             }
