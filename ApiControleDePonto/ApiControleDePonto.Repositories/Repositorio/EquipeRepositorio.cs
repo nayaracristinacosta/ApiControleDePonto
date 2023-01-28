@@ -1,4 +1,5 @@
 ﻿using ApiControleDePonto.Domain.Models;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -10,6 +11,9 @@ namespace ApiControleDePonto.Repositories.Repositorio
 {
     public class EquipeRepositorio : Contexto
     {
+        public EquipeRepositorio(IConfiguration configuration) : base(configuration)
+        {
+        }
         public void Inserir(Equipe model)
         {
             string comandoSql = @"INSERT INTO Equipes

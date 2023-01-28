@@ -1,4 +1,5 @@
 ﻿using ApiControleDePonto.Domain.Models;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -9,8 +10,12 @@ using System.Threading.Tasks;
 
 namespace ApiControleDePonto.Repositories.Repositorio
 {
+    
     public class CargoRepositorio : Contexto
     {
+        public CargoRepositorio(IConfiguration configuration) : base(configuration)
+        {
+        }
         public void Inserir(Cargo model)
         {
             string comandoSql = @"INSERT INTO Cargos

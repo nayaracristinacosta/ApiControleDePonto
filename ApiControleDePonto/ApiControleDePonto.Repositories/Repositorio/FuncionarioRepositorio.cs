@@ -1,4 +1,5 @@
 ﻿using ApiControleDePonto.Domain.Models;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -10,6 +11,36 @@ namespace ApiControleDePonto.Repositories.Repositorio
 {
     public class FuncionarioRepositorio : Contexto
     {
+        public FuncionarioRepositorio(IConfiguration configuration) : base(configuration)
+        {
+        }
+        public Funcionario? ObterFuncionarioPorCredenciais(string email, string senha)
+        {
+            string comandoSql = @"SELECT u.EmailFuncionario, u.NomeDoFuncionario, u.CargoId FROM Funcionarios u
+                                    JOIN Cargos c ON u.CargoId = c.CargoId
+                                    WHERE u.EmailFuncionario = @EmailFuncionario AND u.SenhaFuncionario = @SenhaFuncionario";
+
+            using (var cmd = new SqlCommand(comandoSql, _conn))
+            {
+                cmd.Parameters.AddWithValue("@EmailFuncionario", email);
+                cmd.Parameters.AddWithValue("@SenhaFuncionario", senha);
+
+                using (var rdr = cmd.ExecuteReader())
+                {
+                    if (rdr.Read())
+                    {
+                        return new Funcionario()
+                        {   
+                            NomeDoFuncionario = rdr["NomeDoFuncionario"].ToString(),
+                            EmailFuncionario = rdr["EmailFuncionario"].ToString(),
+                            CargoId = Convert.ToInt32(rdr["CargoId"])
+                        };
+                    }
+                    else
+                        return null;
+                }
+            }
+        }
         public void Inserir(Funcionario model)
         {
             string comandoSql = @"INSERT INTO Funcionarios

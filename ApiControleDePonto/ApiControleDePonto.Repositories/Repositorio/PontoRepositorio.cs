@@ -1,4 +1,5 @@
 ﻿using ApiControleDePonto.Domain.Models;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -10,7 +11,10 @@ namespace ApiControleDePonto.Repositories.Repositorio
 {
     public class PontoRepositorio : Contexto
     {
-            public void Inserir(Ponto model)
+        public PontoRepositorio(IConfiguration configuration) : base(configuration)
+        {
+        }
+        public void Inserir(Ponto model)
             {
                 string comandoSql = @"INSERT INTO Ponto
                                     (DataHorarioPonto,Justificativa,FuncionarioId) 

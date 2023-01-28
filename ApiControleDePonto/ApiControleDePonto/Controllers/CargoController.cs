@@ -9,9 +9,9 @@ namespace ApiControleDePonto.Controllers
     public class CargoController : ControllerBase
     {
         private readonly CargoService _service;
-        public CargoController()
+        public CargoController(CargoService service)
         {
-            _service = new CargoService();
+            _service = service;
         }
 
         [HttpGet("Cargo")]

@@ -1,4 +1,5 @@
-﻿using ApiControleDePonto.Domain.Models;
+﻿using ApiControleDePonto.Domain.Exceptions;
+using ApiControleDePonto.Domain.Models;
 using ApiControleDePonto.Repositories.Repositorio;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,9 @@ namespace ApiControleDePonto.Services
     public class LiderancaService
     {
         private readonly LiderancaRepositorio _repositorio;
-        public LiderancaService()
+        public LiderancaService(LiderancaRepositorio repositorio)
         {
-            _repositorio = new LiderancaRepositorio();
+            _repositorio = repositorio;
         }
 
         public List<Lideranca> Listar(string? descricaoEquipe)
@@ -45,6 +46,7 @@ namespace ApiControleDePonto.Services
         {
             try
             {
+                ValidarModelLideranca(model);
                 _repositorio.AbrirConexao();
                 _repositorio.Atualizar(model);
             }
@@ -69,6 +71,7 @@ namespace ApiControleDePonto.Services
         {
             try
             {
+                ValidarModelLideranca(model);
                 _repositorio.AbrirConexao();
                 _repositorio.Inserir(model);
             }
@@ -77,6 +80,16 @@ namespace ApiControleDePonto.Services
                 _repositorio.FecharConexao();
             }
         }
+        private static void ValidarModelLideranca(Lideranca model, bool isUpdate = false)
+        {
+            if (model is null)
+                throw new ValidacaoException("O json está mal formatado, ou foi enviado vazio.");
 
+            if (model.DescricaoEquipe.Trim().Length < 3 || model.DescricaoEquipe.Trim().Length > 255)
+                throw new ValidacaoException("O Descrição da Equipe precisa ter entre 3 a 255 caracteres.");
+
+            if (model.FuncionarioId <= 0)
+                throw new ValidacaoException("É necessário informar o ID do Funcionário, gentileza informar para inclusão.");
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using ApiControleDePonto.Domain.Models;
+﻿using ApiControleDePonto.Domain.Exceptions;
+using ApiControleDePonto.Domain.Models;
 using ApiControleDePonto.Repositories.Repositorio;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,9 @@ namespace ApiControleDePonto.Services
     public class PontoService
     {
         private readonly PontoRepositorio _repositorio;
-        public PontoService()
+        public PontoService(PontoRepositorio repositorio)
         {
-            _repositorio = new PontoRepositorio();
+            _repositorio = repositorio;
         }
 
         public List<Ponto> Listar(int funcionarioId)
@@ -45,6 +46,7 @@ namespace ApiControleDePonto.Services
         {
             try
             {
+                ValidarModelPonto(model);
                 _repositorio.AbrirConexao();
                 _repositorio.Atualizar(model);
             }
@@ -69,6 +71,7 @@ namespace ApiControleDePonto.Services
         {
             try
             {
+                ValidarModelPonto(model);
                 _repositorio.AbrirConexao();
                 _repositorio.Inserir(model);
             }
@@ -76,6 +79,20 @@ namespace ApiControleDePonto.Services
             {
                 _repositorio.FecharConexao();
             }
+        }
+
+        private static void ValidarModelPonto(Ponto model, bool isUpdate = false)
+        {
+            if (model is null)
+                throw new ValidacaoException("O json está mal formatado, ou foi enviado vazio.");
+
+            if (model.DataHorarioPonto > DateTime.Now.AddSeconds(-1))           
+            throw new ValidacaoException("Hora invalida");
+
+            if (model.Justificativa.Trim().Length < 3 || model.Justificativa.Trim().Length > 255)
+                throw new ValidacaoException("A Justificativa do Ponto precisa ter entre 3 a 255 caracteres.");
+
+
         }
     }
 }

@@ -9,9 +9,9 @@ namespace ApiControleDePonto.Controllers
     public class PontoController : ControllerBase
     {
         private readonly PontoService _service;
-        public PontoController()
+        public PontoController(PontoService service)
         {
-            _service = new PontoService();
+            _service = service;
         }
 
         [HttpGet("Ponto")]

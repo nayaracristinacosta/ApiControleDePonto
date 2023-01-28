@@ -9,9 +9,9 @@ namespace ApiControleDePonto.Controllers
     public class FuncionarioController : ControllerBase
     {
         private readonly FuncionarioService _service;
-        public FuncionarioController()
+        public FuncionarioController(FuncionarioService service)
         {
-            _service = new FuncionarioService();
+            _service = service;
         }
 
         [HttpGet("Funcionario")]

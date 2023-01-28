@@ -1,4 +1,5 @@
-﻿using ApiControleDePonto.Domain.Models;
+﻿using ApiControleDePonto.Domain.Exceptions;
+using ApiControleDePonto.Domain.Models;
 using ApiControleDePonto.Repositories.Repositorio;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,9 @@ namespace ApiControleDePonto.Services
     public class CargoService
     {
         private readonly CargoRepositorio _repositorio;
-        public CargoService()
+        public CargoService(CargoRepositorio repositorio)
         {
-            _repositorio = new CargoRepositorio();
+            _repositorio = repositorio;
         }
 
         public List<Cargo> Listar(string? descricao)
@@ -44,7 +45,8 @@ namespace ApiControleDePonto.Services
         public void Atualizar(Cargo model)
         {
             try
-            {        
+            {
+                ValidarModelCargo(model);
                 _repositorio.AbrirConexao();
                 _repositorio.Atualizar(model);
             }
@@ -68,7 +70,8 @@ namespace ApiControleDePonto.Services
         public void Inserir(Cargo model)
         {
             try
-            {              
+            {
+                ValidarModelCargo(model);
                 _repositorio.AbrirConexao();
                 _repositorio.Inserir(model);
             }
@@ -76,6 +79,15 @@ namespace ApiControleDePonto.Services
             {
                 _repositorio.FecharConexao();
             }
+        }
+        private static void ValidarModelCargo(Cargo model, bool isUpdate = false)
+        {
+            if (model is null)
+                throw new ValidacaoException("O json está mal formatado, ou foi enviado vazio.");
+
+            if (model.Descricao.Trim().Length < 3 || model.Descricao.Trim().Length > 255)
+                throw new ValidacaoException("A Descrição do Cargo precisa ter entre 3 a 255 caracteres.");
+
         }
     }
 }

@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace ApiControleDePonto.Domain.Models
 {
+    public enum EnumCargoUsuario
+    {
+        Colaborador = 1,
+        RecursosHumanos,
+        Diretoria
+    }
     public class Funcionario
     {
         public int FuncionarioId { get; set; }
@@ -18,6 +24,5 @@ namespace ApiControleDePonto.Domain.Models
         public string SenhaFuncionario { get; set; }
         public int CargoId { get; set; }
         
-
     }
 }

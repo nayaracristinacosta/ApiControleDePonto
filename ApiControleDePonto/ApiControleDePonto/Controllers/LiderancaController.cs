@@ -9,9 +9,9 @@ namespace ApiControleDePonto.Controllers
     public class LiderancaController : ControllerBase
     {
         private readonly LiderancaService _service;
-        public LiderancaController()
+        public LiderancaController(LiderancaService service)
         {
-            _service = new LiderancaService();
+            _service = service;
         }
 
         [HttpGet("Lideranca")]

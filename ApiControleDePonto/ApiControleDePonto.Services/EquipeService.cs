@@ -1,4 +1,5 @@
-﻿using ApiControleDePonto.Domain.Models;
+﻿using ApiControleDePonto.Domain.Exceptions;
+using ApiControleDePonto.Domain.Models;
 using ApiControleDePonto.Repositories.Repositorio;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,9 @@ namespace ApiControleDePonto.Services
     public class EquipeService
     {
         private readonly EquipeRepositorio _repositorio;
-        public EquipeService()
+        public EquipeService(EquipeRepositorio repositorio)
         {
-            _repositorio = new EquipeRepositorio();
+            _repositorio = repositorio;
         }
 
         public List<Equipe> Listar(int descricao)
@@ -45,6 +46,7 @@ namespace ApiControleDePonto.Services
         {
             try
             {
+                ValidarModelEquipe(model);
                 _repositorio.AbrirConexao();
                 _repositorio.Atualizar(model);
             }
@@ -69,6 +71,7 @@ namespace ApiControleDePonto.Services
         {
             try
             {
+                ValidarModelEquipe(model);
                 _repositorio.AbrirConexao();
                 _repositorio.Inserir(model);
             }
@@ -81,7 +84,7 @@ namespace ApiControleDePonto.Services
         public void InserirFuncionario(Equipe model)
         {
             try
-            {
+            {                
                 _repositorio.AbrirConexao();
                 _repositorio.InserirFuncionarioEmUmaEquipe(model);
             }
@@ -90,5 +93,18 @@ namespace ApiControleDePonto.Services
                 _repositorio.FecharConexao();
             }
         }
+        private static void ValidarModelEquipe(Equipe model, bool isUpdate = false)
+        {
+            if (model is null)
+                throw new ValidacaoException("O json está mal formatado, ou foi enviado vazio.");
+
+            if (model.LiderancaId <= 0)
+                throw new ValidacaoException("É necessário informar o ID do Líder, gentileza informar para inclusão.");
+
+            if (model.FuncionarioId <= 0)
+                throw new ValidacaoException("É necessário informar o ID do Funcionário, gentileza informar para inclusão.");
+
+        }
     }
+    
 }

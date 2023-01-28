@@ -9,9 +9,9 @@ namespace ApiControleDePonto.Controllers
     public class EquipeController : ControllerBase
     {
         private readonly EquipeService _service;
-        public EquipeController()
+        public EquipeController(EquipeService service)
         {
-            _service = new EquipeService();
+            _service = service;
         }
 
         [HttpGet("Equipe")]
