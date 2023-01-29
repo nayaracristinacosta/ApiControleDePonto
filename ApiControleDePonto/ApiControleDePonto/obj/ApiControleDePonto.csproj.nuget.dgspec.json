@@ -272,9 +272,17 @@
               "target": "Package",
               "version": "[1.17.0, )"
             },
+            "OpenXmlPowerTools": {
+              "target": "Package",
+              "version": "[4.5.3.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "Swashbuckle.Core": {
+              "target": "Package",
+              "version": "[5.6.0, )"
             }
           },
           "imports": [

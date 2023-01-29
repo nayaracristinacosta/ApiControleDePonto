@@ -63,3 +63,6 @@ INNER JOIN Equipes B
 ON A.FuncionarioId = B.FuncionarioId
 
 
+SELECT u.EmailFuncionario, u.NomeDoFuncionario, u.CargoId FROM Funcionarios u
+                                    JOIN Cargos c ON u.CargoId = c.CargoId
+                                    WHERE u.EmailFuncionario = 'solimar@gmail.com' AND u.SenhaFuncionario = '3627909A29C31381A071EC27F7C9CA97726182AED29A7DDD2E54353322CFB30ABB9E3A6DF2AC2C20FE23436311D678564D0C8D305930575F60E2D3D048184D79'

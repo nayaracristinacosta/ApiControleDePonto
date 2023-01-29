@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiControleDePonto</name>
+    </assembly>
+    <members>
+        <member name="M:ApiSupermecado.Controllers.AutorizacaoController.Login(ApiControleDePonto.Domain.Models.Contratos.FuncionarioRequest)">
+            <summary>
+            Metodo para autenticar no sistema
+            Campos obrigatórios: email, senha
+            </summary>
+            <param name="model"></param>
+            <returns>Retorna um bearer token de 12 horas com nivel de acesso e nome do usuário</returns>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.CargoController.Listar(System.String)">
+            <summary>
+            Através dessa rota você será capaz de listar um cargo - 
+            Campos obrigatórios: descricao
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.CargoController.ObterPorId(System.Int32)">
+            <summary>
+            Através dessa rota você será capaz de listar um cargo -
+            Campos obrigatórios: cargoId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.CargoController.Inserir(ApiControleDePonto.Domain.Models.Cargo)">
+            <summary>
+            Através dessa rota você será capaz de cadastrar um cargo - 
+            Campos obrigatórios: descricao
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.CargoController.Deletar(System.Int32)">
+            <summary>
+            Através dessa rota você será capaz de deletar um cargo - 
+            Campos obrigatórios: cargoId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.CargoController.Atualizar(ApiControleDePonto.Domain.Models.Cargo)">
+            <summary>
+            Através dessa rota você será capaz de atualizar um cargo - 
+            Campos obrigatórios: cargoId, descricao
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.EquipeController.Listar(System.Int32)">
+            <summary>
+            Através dessa rota você será capaz de listar uma equipe - 
+            Campos obrigatórios: descricao
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.EquipeController.ObterPorId(System.Int32)">
+            <summary>
+            Através dessa rota você será capaz de listar uma equipe -
+            Campos obrigatórios: equipeId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.EquipeController.Inserir(ApiControleDePonto.Domain.Models.Equipe)">
+            <summary>
+            Através dessa rota você será capaz de cadastrar uma equipe - 
+            Campos obrigatórios: liderancaId, funcionarioId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.EquipeController.InserirFuncionario(ApiControleDePonto.Domain.Models.Equipe)">
+            <summary>
+            Através dessa rota você será capaz de cadastrar uma equipe - 
+            Campos obrigatórios: equipeId, liderancaId, funcionarioId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.EquipeController.Deletar(System.Int32)">
+            <summary>
+            Através dessa rota você será capaz de deletar uma equipe - 
+            Campos obrigatórios: equipeId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.EquipeController.Atualizar(ApiControleDePonto.Domain.Models.Equipe)">
+            <summary>
+            Através dessa rota você será capaz de atualizar uma equipe - 
+            Campos obrigatórios: equipeId, liderancaId, funcionarioId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.FuncionarioController.Listar(System.String)">
+            <summary>
+            Através dessa rota você será capaz de listar um funcionário - 
+            Campos obrigatórios: nomeDoFuncionario
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.FuncionarioController.ObterPorId(System.Int32)">
+            <summary>
+            Através dessa rota você será capaz de listar um funcionário -
+            Campos obrigatórios: funcionarioId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.FuncionarioController.Inserir(ApiControleDePonto.Domain.Models.Funcionario)">
+            <summary>
+            Através dessa rota você será capaz de cadastrar um funcionário - 
+            Campos obrigatórios: nomeDoFuncionario, cpf, nascimentoFuncionario, dataDeAdmissao, celularFuncionario, emailFuncionario, senhaFuncionario, cargoId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.FuncionarioController.Deletar(System.Int32)">
+            <summary>
+            Através dessa rota você será capaz de deletar um funcionário - 
+            Campos obrigatórios: funcionarioId 
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.FuncionarioController.Atualizar(ApiControleDePonto.Domain.Models.Funcionario)">
+            <summary>
+            Através dessa rota você será capaz de atualizar um funcionário - 
+            Campos obrigatórios: funcionarioId, nomeDoFuncionario, cpf, nascimentoFuncionario, dataDeAdmissao, celularFuncionario, emailFuncionario, senhaFuncionario, cargoId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.LiderancaController.Listar(System.String)">
+            <summary>
+            Através dessa rota você será capaz de listar uma liderança - 
+            Campos obrigatórios: descricaoEquipe
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.LiderancaController.ObterPorId(System.Int32)">
+            <summary>
+            Através dessa rota você será capaz de listar uma liderança - 
+            Campos obrigatórios: liderancaId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.LiderancaController.Inserir(ApiControleDePonto.Domain.Models.Lideranca)">
+            <summary>
+            Através dessa rota você será capaz de cadastrar uma liderança - 
+            Campos obrigatórios: funcionarioId, descricaoEquipe
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.LiderancaController.Deletar(System.Int32)">
+            <summary>
+            Através dessa rota você será capaz de deletar uma liderança - 
+            Campos obrigatórios: liderancaId 
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.LiderancaController.Atualizar(ApiControleDePonto.Domain.Models.Lideranca)">
+            <summary>
+            Através dessa rota você será capaz de atualizar uma liderança - 
+            Campos obrigatórios: liderancaId, funcionarioId, descricaoEquipe
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.PontoController.Listar(System.Int32)">
+            <summary>
+            Através dessa rota você será capaz de listar um ponto - 
+            Campos obrigatórios: funcionarioId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>        
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.PontoController.ObterPorId(System.Int32)">
+            <summary>
+            Através dessa rota você será capaz de listar  um ponto - 
+            Campos obrigatórios: pontoId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.PontoController.Inserir(ApiControleDePonto.Domain.Models.Ponto)">
+            <summary>
+            Através dessa rota você será capaz de cadastrar  um ponto - 
+            Campos obrigatórios: dataHorarioPonto, funcionarioId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.PontoController.Deletar(System.Int32)">
+            <summary>
+            Através dessa rota você será capaz de deletar  um ponto - 
+            Campos obrigatórios: pontoId 
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+        <member name="M:ApiControleDePonto.Controllers.PontoController.Atualizar(ApiControleDePonto.Domain.Models.Ponto)">
+            <summary>
+            Através dessa rota você será capaz de atualizar um ponto - 
+            Campos obrigatórios: pontoId, dataHorarioPonto, justificativa, funcionarioId
+            </summary>
+            <returns></returns>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+        </member>
+    </members>
+</doc>

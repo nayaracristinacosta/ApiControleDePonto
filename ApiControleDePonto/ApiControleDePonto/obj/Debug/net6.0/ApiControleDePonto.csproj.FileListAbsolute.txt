@@ -65,3 +65,13 @@ C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDe
 C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\Ioc.dll
 C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\Ioc.pdb
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\OpenXmlPowerTools.dll
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\Swashbuckle.Core.dll
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\System.Management.Automation.dll
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\ApiControleDePonto.xml
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\obj\Debug\net6.0\ApiControleDePonto.xml

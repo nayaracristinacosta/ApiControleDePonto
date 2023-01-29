@@ -1,16 +1,15 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ApiControleDePonto.Domain.Models;
+using ApiSupermecado.Domain.Models;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Authorization;
-using ApiControleDePonto.Services;
 using ApiControleDePonto.Domain.Models.Contratos;
-using ApiSupermecado.Domain.Models;
+using ApiControleDePonto.Services;
 
-namespace ApiControleDePonto.Controllers
+namespace ApiSupermecado.Controllers
 {
     [AllowAnonymous]
     [ApiController]

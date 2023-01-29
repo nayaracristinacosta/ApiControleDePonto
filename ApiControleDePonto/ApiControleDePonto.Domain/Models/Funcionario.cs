@@ -8,9 +8,11 @@ namespace ApiControleDePonto.Domain.Models
 {
     public enum EnumCargoUsuario
     {
-        Colaborador = 1,
+        LiderDeEquipe = 1,
         RecursosHumanos,
-        Diretoria
+        Diretoria,
+        Colaborador
+            
     }
     public class Funcionario
     {
