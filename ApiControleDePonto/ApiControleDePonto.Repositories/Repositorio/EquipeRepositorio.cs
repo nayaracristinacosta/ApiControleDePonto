@@ -32,7 +32,7 @@ namespace ApiControleDePonto.Repositories.Repositorio
         public void InserirFuncionarioEmUmaEquipe(Equipe model)
         {
             string comandoSql = @"INSERT INTO Equipes
-                                    (FuncionarioId) 
+                                    (LiderancaId, FuncionarioId) 
                                         VALUES
                                     (@LiderancaId,@LiderancaId);";
 

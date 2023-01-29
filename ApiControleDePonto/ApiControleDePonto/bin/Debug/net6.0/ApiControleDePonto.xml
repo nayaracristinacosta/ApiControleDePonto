@@ -202,7 +202,7 @@
             Campos obrigatórios: dataHorarioPonto, funcionarioId
             </summary>
             <returns></returns>
-            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
+            <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>       
         </member>
         <member name="M:ApiControleDePonto.Controllers.PontoController.Deletar(System.Int32)">
             <summary>

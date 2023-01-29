@@ -75,3 +75,4 @@ C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDe
 C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\System.Management.Automation.dll
 C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\ApiControleDePonto.xml
 C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\obj\Debug\net6.0\ApiControleDePonto.xml
+C:\Users\NayaraCosta\Desktop\ApiControleDePonto\ApiControleDePonto\ApiControleDePonto\bin\Debug\net6.0\ApiControleDePonto.staticwebassets.runtime.json

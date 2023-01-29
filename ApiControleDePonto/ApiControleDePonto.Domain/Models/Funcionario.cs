@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ApiControleDePonto.Domain.Models
 {
-    public enum EnumCargoUsuario
+    public enum EnumCargoUsuario 
     {
-        LiderDeEquipe = 1,
+        Administrador = 1,
         RecursosHumanos,
         Diretoria,
         Colaborador

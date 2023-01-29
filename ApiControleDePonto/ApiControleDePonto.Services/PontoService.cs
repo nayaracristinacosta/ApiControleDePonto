@@ -85,10 +85,7 @@ namespace ApiControleDePonto.Services
         {
             if (model is null)
                 throw new ValidacaoException("O json está mal formatado, ou foi enviado vazio.");
-
-            if (model.DataHorarioPonto > DateTime.Now.AddSeconds(-1))           
-            throw new ValidacaoException("Hora invalida");
-
+        
             if (model.Justificativa.Trim().Length < 3 || model.Justificativa.Trim().Length > 255)
                 throw new ValidacaoException("A Justificativa do Ponto precisa ter entre 3 a 255 caracteres.");
 

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApiControleDePonto.Controllers
 {
+    [Authorize]
     [ApiController]
     public class EquipeController : ControllerBase
     {
@@ -22,8 +23,6 @@ namespace ApiControleDePonto.Controllers
         /// <returns></returns>
         /// <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
         [Authorize(Roles = "1")]
-        [Authorize(Roles = "2")]
-        [Authorize(Roles = "3")]
         [HttpGet("Equipe")]
         public IActionResult Listar([FromQuery] int descricao)
         {
@@ -36,13 +35,11 @@ namespace ApiControleDePonto.Controllers
         /// </summary>
         /// <returns></returns>
         /// <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
-        [Authorize(Roles = "1")]
-        [Authorize(Roles = "2")]
-        [Authorize(Roles = "3")]
-        [HttpGet("EquipeId")]
-        public IActionResult ObterPorId([FromQuery] int EquipeId)
+        [Authorize(Roles = "1,2,3")]
+        [HttpGet("Equipe/{equipeId}")]
+        public IActionResult ObterPorId([FromRoute] int equipeId)
         {
-            return StatusCode(200, _service.Obter(EquipeId));
+            return StatusCode(200, _service.Obter(equipeId));
         }
 
         /// <summary>
@@ -102,10 +99,10 @@ namespace ApiControleDePonto.Controllers
         /// <returns></returns>
         /// <response code="200">Sucesso, e retorna o elemento encontrado via ID</response>
         [Authorize(Roles = "2")]
-        [HttpDelete("Equipe/EquipeId")]
-        public IActionResult Deletar([FromQuery] int EquipeId)
+        [HttpDelete("Equipe/{equipeId}")]
+        public IActionResult Deletar([FromRoute] int equipeId)
         {
-            _service.Deletar(EquipeId);
+            _service.Deletar(equipeId);
             return StatusCode(200);
         }
 

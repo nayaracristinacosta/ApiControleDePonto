@@ -32,7 +32,7 @@ namespace ApiControleDePonto.Services
                 Subject = new ClaimsIdentity(new[]
                 {
                        new Claim("Email", usuario.EmailFuncionario),
-                       new Claim(ClaimTypes.Role, usuario.CargoId.GetHashCode().ToString()),
+                       new Claim(ClaimTypes.Role, Convert.ToString(usuario.CargoId.GetHashCode())),
                 }),
                 Expires = DateTime.UtcNow.AddHours(12),
                 SigningCredentials = new SigningCredentials
