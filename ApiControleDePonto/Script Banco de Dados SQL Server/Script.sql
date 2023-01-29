@@ -1,4 +1,4 @@
-create database CONTROLEDEPONTO;
+CREATE DATABASE CONTROLEDEPONTO;
 
 USE CONTROLEDEPONTO;
 
@@ -17,52 +17,36 @@ CREATE TABLE Funcionarios(
 	EmailFuncionario VARCHAR(255) NOT NULL,
 	SenhaFuncionario VARCHAR(255) NOT NULL,
 	CargoId INT FOREIGN KEY  REFERENCES Cargos(CargoId)
+	ON DELETE CASCADE
 
 );
 
 CREATE TABLE Liderancas(
 	LiderancaId INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-	FuncionarioId INT FOREIGN KEY REFERENCES Funcionarios(FuncionarioId),
+	FuncionarioId INT FOREIGN KEY REFERENCES Funcionarios(FuncionarioId) ON DELETE CASCADE,
 	DescricaoEquipe VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Equipes(
 	EquipeId INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-	LiderancaId INT FOREIGN KEY REFERENCES Liderancas(LiderancaId),
-	FuncionarioId INT FOREIGN KEY REFERENCES Funcionarios(FuncionarioId)
+	LiderancaId INT  NOT NULL, 
+	FuncionarioId INT  NOT NULL, 
+	FOREIGN KEY (LiderancaId)  REFERENCES Liderancas(LiderancaId) ,
+	FOREIGN KEY (FuncionarioId) REFERENCES Funcionarios(FuncionarioId)
 );
 
 CREATE TABLE Ponto(
 	PontoId BIGINT PRIMARY KEY NOT NULL IDENTITY(1,1),
 	DataHorarioPonto DATETIME NOT NULL,
 	Justificativa VARCHAR(255),
-	FuncionarioId INT FOREIGN KEY REFERENCES Funcionarios(FuncionarioId)
+	FuncionarioId INT FOREIGN KEY REFERENCES Funcionarios(FuncionarioId) ON DELETE CASCADE
 );
 
-SELECT * FROM Funcionarios
+insert into Cargos values('Administrador');
+insert into Cargos values('Recursos Humanos');
+insert into Cargos values('Diretoria');
+insert into Cargos values('Colaborador');
 
-SELECT * FROM Liderancas
+INSERT INTO Funcionarios(NomeDoFuncionario, Cpf, NascimentoFuncionario, DataDeAdmissao, CelularFuncionario,EmailFuncionario, SenhaFuncionario, CargoId)
+VALUES('Administrador', '66136918013', '2000-01-01', '2000-01-01', '999999999','administrador@administrador.com', '12345', 1 );
 
-SELECT * FROM Cargos
-
-SELECT * FROM Ponto
-
-SELECT * FROM Equipes
-
-
-USE CADASTRODEUSUARIOS
-
-DELETE FROM Funcionarios
-
-DELETE FROM Cargos
-
-select f.NomeDoFuncionario, f.DataDeAdmissao, e.DescricaoEquipe from Funcionarios f INNER JOIN Liderancas e ON f.FuncionarioId = e.FuncionarioId  
-SELECT a.Nome
-FROM Funcionarios A
-INNER JOIN Equipes B
-ON A.FuncionarioId = B.FuncionarioId
-
-
-SELECT u.EmailFuncionario, u.NomeDoFuncionario, u.CargoId FROM Funcionarios u
-                                    JOIN Cargos c ON u.CargoId = c.CargoId
-                                    WHERE u.EmailFuncionario = 'solimar@gmail.com' AND u.SenhaFuncionario = '3627909A29C31381A071EC27F7C9CA97726182AED29A7DDD2E54353322CFB30ABB9E3A6DF2AC2C20FE23436311D678564D0C8D305930575F60E2D3D048184D79'
